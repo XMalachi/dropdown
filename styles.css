@@ -1,0 +1,133 @@
+/* i got a font called raleway and used it for the universal selector (*)  */
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Raleway', sans-serif; 
+}
+
+/* to remove all underlines that comes with links */
+a{
+    text-decoration: none;
+}
+
+/* to remove  the list numberings or styles that comes with list */
+li{
+    list-style-type: none;
+}
+
+/*  align items is used mostly with flex to line up items at the center of their block, so that they stay on a straight line */
+.navBar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 40px;
+    font-size: 0.8em;
+    color: rgba(77, 2, 77, 0.815);
+}
+
+.kuda-logo{
+    height: 8vh;
+}
+
+/* cursor: pointer; is  used to make the cursor to be a finger pointer. */
+.left-nav-list>*, .right-nav-list>*{
+    margin-right: 45px;
+    cursor: pointer;
+}
+
+#get-kuda{
+    background-color: rgb(48, 10, 70);
+    color: white;
+    padding: 15px 30px;
+    border-radius: 10px;
+    transition: 0.5s ease-in;
+}
+
+#get-kuda:hover{
+    background-color: rgb(207, 203, 209);
+    color: rgb(48, 10, 70);
+}
+
+/* box shadow is used to implemment a shadow for any element. first 7px is for the bottom and second is for  
+the right side, while the third is for the shadow's blur
+*/
+.beta-btn{
+    font-size: 0.8em;
+    padding: 2px 5px;
+    box-shadow: 7px 7px 30px rgba(211, 208, 208, 0.644);
+}
+
+.flag-of-nigeria{
+    height:20px;
+}
+
+/*  dropdown styles */
+.dropdown-list{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.8em;
+    color: rgba(77, 2, 77, 0.815);
+}
+
+.dropdown-list div{
+    background-color: rgba(255, 255, 255, 0.904);
+    box-shadow: 2px 2px 2px rgb(202, 201, 201);
+    padding: 20px;
+}
+
+.dropdown-list ul a li{
+    margin-top: 15px;
+}
+
+/* hiding the list 
+Initially the lists have classes, and i styled those classes and put a display of none, so that i can use javascript
+to show it only when i click on them. Notice where i put display: none; so the each classname changes to these classname 
+(personal-list-toggled, company-list-toggled, help-list-toggled) respectively. Ill explain better when we meet.
+*/
+
+.personal-list{
+    position: absolute;
+    top: 60px;
+    left: 27vw;
+    display: none;
+}
+
+.personal-list-toggled{
+    position: absolute;
+    top: 60px;
+    left: 27vw;
+    transition: 0.5s top ease-in;
+    display: block;
+}
+
+.company-list{
+    position: absolute;
+    top: 60px;
+    left: 45vw;
+    display: none;
+}
+
+.company-list-toggled{
+    position: absolute;
+    top: 60px;
+    left: 45vw;
+    transition: 0.5s top ease-in;
+    display: block;
+}
+
+.help-list{
+    position: absolute;
+    top: 60px;
+    left: 53vw;
+    display: none;
+}
+
+.help-list-toggled{
+    position: absolute;
+    top: 60px;
+    left: 53vw;
+    transition: 0.5s top ease-in;
+    display: block;
+}
